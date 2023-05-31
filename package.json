@@ -1,0 +1,24 @@
+{
+  "name": "reto-el-juego-de-la-vida-loroscoders",
+  "version": "1.0.0",
+  "description": "[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/GZK4nxFE) ![BrightCoders Logo](img/logo.png)",
+  "main": "app.js",
+  "devDependencies": {
+    "eslint": "^8.41.0",
+    "eslint-config-google": "^0.14.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrightCoders-Institute/reto-el-juego-de-la-vida-loroscoders.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrightCoders-Institute/reto-el-juego-de-la-vida-loroscoders/issues"
+  },
+  "homepage": "https://github.com/BrightCoders-Institute/reto-el-juego-de-la-vida-loroscoders#readme"
+}
