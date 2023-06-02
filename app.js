@@ -57,9 +57,6 @@ class GameOfLife {
     if (rows <= 0) {
       throw new Error('Las filas deben ser positivos.');
     }
-    if (isNaN(rows)) {
-      throw new Error('Las filas no deben de estar vacias.');
-    }
   }
 
   /**
@@ -70,13 +67,10 @@ class GameOfLife {
    */
   validateColumns(columns) {
     if (typeof columns !== 'number') {
-      throw new Error('Las columnas deben de ser en número');
+      throw new Error('Las columnas deben de ser en número.');
     }
     if (columns <= 0 ) {
-      throw new Error('Las Columnas deben de ser positivos');
-    }
-    if (isNaN(columns)) {
-      throw new Error('Las Columnas no deben de estar vacías');
+      throw new Error('Las Columnas deben de ser positivos.');
     }
   }
 
@@ -100,10 +94,10 @@ class GameOfLife {
    * @param {Array<Array<string>>} copia - copia del tablero del juego.
    */
   nextGeneration() {
-    const copia = this.createCopy();
+    const copy = this.createCopy();
     for (let i = 0; i < this.rows; i++) {
       for (let j = 0; j < this.columns; j++) {
-        this.cellsAround(i, j, copia);
+        this.cellsAround(i, j, copy);
       }
     }
     this.generation++;
@@ -113,31 +107,31 @@ class GameOfLife {
    * Verifica las celdas vecinas de una posición dada.
    * @param {number} rows - La fila de la posición.
    * @param {number} columns - La columna de la posición.
-   * @param {Array<Array<string>>} copia - La fila de la posición.
+   * @param {Array<Array<string>>} copy - La fila de la posición.
    */
-  cellsAround(rows, columns, copia) {
+  cellsAround(rows, columns, copy) {
     let cellsAlive = 0;
     for (let i = rows - 1; i <= rows + 1; i++) {
       for (let j = columns - 1; j <= columns + 1; j++) {
         if (i >= 0 && i < this.rowss && j >= 0 &&
           j < this.columns && (i !== rows || j !== columns)) {
-          if (copia[i][j] === '*') {
+          if (copy[i][j] === '*') {
             cellsAlive++;
           }
         }
       }
     }
 
-    if (this.grid[fila][columna] === '*') {
+    if (this.grid[rows][columns] === '*') {
       if (cellsAlive <= 1) {
-        this.grid[fila][columna] = '.';
+        this.grid[rows][columns] = '.';
       }
       if (cellsAlive > 3) {
-        this.grid[fila][columna] = '.';
+        this.grid[rows][columns] = '.';
       }
     } else {
       if (cellsAlive == 3) {
-        this.grid[fila][columna] = '*';
+        this.grid[rows][columns] = '*';
       }
     }
   }
@@ -152,5 +146,8 @@ class GameOfLife {
     }
   }
 }
+
+module.exports = GameOfLife;
+
 const tablero = new GameOfLife(4, 8);
 tablero.nextGeneration();
