@@ -119,7 +119,7 @@ class GameOfLife {
     let cellsAlive = 0;
     for (let i = rows - 1; i <= rows + 1; i++) {
       for (let j = columns - 1; j <= columns + 1; j++) {
-        if (i >= 0 && i < this.rowss && j >= 0 &&
+        if (i >= 0 && i < this.rows && j >= 0 &&
           j < this.columns && (i !== rows || j !== columns)) {
           if (copia[i][j] === '*') {
             cellsAlive++;
@@ -128,16 +128,16 @@ class GameOfLife {
       }
     }
 
-    if (this.grid[fila][columna] === '*') {
+    if (this.grid[rows][columns] === '*') {
       if (cellsAlive <= 1) {
-        this.grid[fila][columna] = '.';
+        this.grid[rows][columns]  = '.';
       }
       if (cellsAlive > 3) {
-        this.grid[fila][columna] = '.';
+        this.grid[rows][columns]  = '.';
       }
     } else {
       if (cellsAlive == 3) {
-        this.grid[fila][columna] = '*';
+        this.grid[rows][columns] = '*';
       }
     }
   }
@@ -153,4 +153,6 @@ class GameOfLife {
   }
 }
 const tablero = new GameOfLife(4, 8);
+tablero.printGrid();
 tablero.nextGeneration();
+tablero.printGrid();
