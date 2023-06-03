@@ -134,7 +134,7 @@ class GameOfLife {
         this.grid[rows][columns] = '.';
       }
     } else {
-      if (cellsAlive == 3) {
+      if (cellsAlive === 3) {
         this.grid[rows][columns] = '*';
       }
     }
