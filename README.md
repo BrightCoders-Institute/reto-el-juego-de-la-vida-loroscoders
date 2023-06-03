@@ -66,8 +66,6 @@ Este proyecto fue desarrollado como parte de un reto propuesto por LorosCoders, 
 
 ## Contacto
 
-Si tienes alguna pregunta o sugerencia acerca del proyecto, no dudes en visitar nuestro espacio de colaboración en Gather.town: [Campus Zeffo - El Juego de la Vida](https://app.gather.town/app/Xqjd
-
-4OwO4fzoQAHV/campus-zeffo).
+Si tienes alguna pregunta o sugerencia acerca del proyecto, no dudes en visitar nuestro espacio de colaboración en Gather.town: [Campus Zeffo - El Juego de la Vida](https://app.gather.town/app/Xqjd4OwO4fzoQAHV/campus-zeffo).
 
 ¡Diviértete jugando El Juego de la Vida!
