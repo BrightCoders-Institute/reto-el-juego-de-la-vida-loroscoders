@@ -124,17 +124,14 @@ class GameOfLife {
 
     if (this.grid[rows][columns] === '*') {
       if (cellsAlive <= 1) {
-<<<<<<< HEAD
         this.grid[rows][columns]  = '.';
       }
       if (cellsAlive > 3) {
         this.grid[rows][columns]  = '.';
-=======
         this.grid[rows][columns] = '.';
       }
       if (cellsAlive > 3) {
         this.grid[rows][columns] = '.';
->>>>>>> 07bd33d9973a6747c57fd99f2889e67d994da224
       }
     } else {
       if (cellsAlive == 3) {
